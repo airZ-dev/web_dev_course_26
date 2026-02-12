@@ -26,48 +26,43 @@ end
 # Return an array with all numbers doubled
 # Expected: double_numbers([1, 2, 3]) => [2, 4, 6]
 def double_numbers(arr)
-  arr.map(|num|num*2)
-  arr
+  return arr.map{|n|n*2}
 end
 
 # Exercise 4: Array filtering
 # Return only even numbers from an array
 # Expected: even_numbers([1, 2, 3, 4, 5, 6]) => [2, 4, 6]
 def even_numbers(arr)
-  # TODO: Use .select or .filter method
-  nil
+  return arr.filter{|x|x.even?}
 end
 
 # Exercise 5: Array reduction
 # Calculate the sum of all numbers in an array
 # Expected: sum_array([1, 2, 3, 4]) => 10
 def sum_array(arr)
-  # TODO: Use .sum or .reduce method
-  nil
+  arr.sum{|x|x}
 end
 
 # Exercise 6: Array operations
 # Check if an array contains a specific element
 # Expected: contains?([:a, :b, :c], :b) => true
 def contains?(arr, element)
-  # TODO: Use .include? method
-  nil
+  arr.include?(element)
 end
 
 # Exercise 7: Array sorting
 # Sort an array of numbers in descending order
 # Expected: sort_desc([3, 1, 4, 1, 5]) => [5, 4, 3, 1, 1]
 def sort_desc(arr)
-  # TODO: Use .sort with .reverse or .sort_by
-  nil
+  arr.sort().reverse()
 end
 
 # Exercise 8: Array range
 # Create an array of numbers from start to end (inclusive)
 # Expected: number_range(1, 5) => [1, 2, 3, 4, 5]
 def number_range(start, finish)
-  # TODO: Use (start..finish).to_a
-  nil
+  arr = (start..finish).to_a
+  arr
 end
 
 # ============================================
