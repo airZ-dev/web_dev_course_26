@@ -9,24 +9,25 @@
 # Return the first and last elements of an array
 # Expected: first_and_last([1, 2, 3, 4]) => [1, 4]
 def first_and_last(arr)
-  # TODO: Use array indexing with [0] and [-1]
-  nil
+  arr2 = []
+  arr2 << arr[0] << arr[-1]
+  arr2
 end
 
 # Exercise 2: Array methods
 # Add an element to the end of an array and return the modified array
 # Expected: add_element([1, 2, 3], 4) => [1, 2, 3, 4]
 def add_element(arr, element)
-  # TODO: Use .push or << operator (modify and return the array)
-  nil
+  arr << element
+  arr
 end
 
 # Exercise 3: Array iteration
 # Return an array with all numbers doubled
 # Expected: double_numbers([1, 2, 3]) => [2, 4, 6]
 def double_numbers(arr)
-  # TODO: Use .map method
-  nil
+  arr.map(|num|num*2)
+  arr
 end
 
 # Exercise 4: Array filtering
