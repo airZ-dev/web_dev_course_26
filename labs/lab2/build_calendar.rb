@@ -80,12 +80,13 @@ end
 
 #функция записи календаря в файл json формата
 def WriteOutputFile(filePath, jsonData)
-    if(!filePath.include?(".txt"))
+    if(!filePath.include?(".txt") and !filePath.include?(".json"))
         raise "Output file isnt correct"
     end
-    File.open(filePath, 'w') do |file|
-        file.write(file)
-    end
+    if(filePath.include?(".txt"))
+        filePath = filePath.split(".")[0]+".json"
+        end
+    File.write(filePath, JSON.pretty_generate(jsonData))
     puts "data write successfully"
 end
 
